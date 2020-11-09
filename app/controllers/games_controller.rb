@@ -2,6 +2,8 @@ require 'open-uri'
 require 'json'
 
 class GamesController < ApplicationController
+  # before_action :letters #, only: [:index, :show]
+
   def new
     @letters = generate_grid(10)
   end
@@ -38,4 +40,10 @@ class GamesController < ApplicationController
       "Sorry but ''#{attempt}'' can't be built out of #{grid.join(', ')}."
     end
   end
+
+  # private
+
+  # def letters
+  #   @letters = generate_grid(10)
+  # end
 end
