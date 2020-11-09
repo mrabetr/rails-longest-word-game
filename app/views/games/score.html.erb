@@ -1,0 +1,10 @@
+<h1>Result</h1>
+<ul>
+  <% @letters.each do |letter| %>
+  <li><%= letter %></li>
+  <% end %>
+</ul>
+<br>
+<p><%= @message %></p>
+<br>
+<%= link_to "Play again", new_path %>
